@@ -79,7 +79,7 @@ Open the URL generated in your console. Once you grant permission to the app, yo
 
 
 
-## step to create discount using graphQL
+## Steps to create discount using graphQL and apply discount in frontend
 
 Step 1: Open shopify graphQL app
 
