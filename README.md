@@ -99,7 +99,7 @@ mutation discountAutomaticAppCreate($automaticAppDiscount: DiscountAutomaticAppI
 }
 ``` 
 
-step 3: Add variable value used in step 2 mutation
+Step 3: Add variable value used in step 2 mutation
 
 ```shell
 {
@@ -120,4 +120,4 @@ step 3: Add variable value used in step 2 mutation
 
 Note: Replace functionId with your own functionId
 
-step 4: Add 'apply_volume_discount' tag to the product to apply volume_discount
+Step 4: Add 'apply_volume_discount' tag to the product to apply volume_discount
