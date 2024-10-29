@@ -81,6 +81,10 @@ Open the URL generated in your console. Once you grant permission to the app, yo
 
 ## step to create discount using graphQL
 
+Step 1: Open shopify graphQL app
+
+Step 2: Add the below mutation to create a automatic discount
+
 ```shell
 mutation discountAutomaticAppCreate($automaticAppDiscount: DiscountAutomaticAppInput!) {
   discountAutomaticAppCreate(automaticAppDiscount: $automaticAppDiscount) {
@@ -94,3 +98,26 @@ mutation discountAutomaticAppCreate($automaticAppDiscount: DiscountAutomaticAppI
   }
 }
 ``` 
+
+step 3: Add variable value used in step 2 mutation
+
+```shell
+{
+  "automaticAppDiscount": {
+    "title": "New volume discount",
+    "functionId": "1bd0a000-9330-4de0-8e41-239c48166ce6",
+    "startsAt": "2024-10-29T08:24:40.924Z",
+    "endsAt": null,
+    "metafields": {
+      "namespace": "volume-discount",
+      "key": "quantity-limit",
+      "type":"json",
+      "value": "{\"tag\":\"apply_volume_discount\",\"discounts\":[{\"quantity\":2,\"discount\":10,\"message\":\"10% volume discount\"},{\"quantity\":4,\"discount\":20,\"message\":\"20% volume discount\"},{\"quantity\":6,\"discount\":30,\"message\":\"30% volume discount\"}]}"
+    }
+  }
+}
+```
+
+Note: Replace functionId with your own functionId
+
+step 4: Add 'apply_volume_discount' tag to the product to apply volume_discount
